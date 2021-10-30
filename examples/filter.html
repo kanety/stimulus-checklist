@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script type="importmap">
+    {
+      "imports": {
+        "@hotwired/stimulus": "/node_modules/@hotwired/stimulus/dist/stimulus.js",
+        "@kanety/stimulus-static-actions": "/node_modules/@kanety/stimulus-static-actions/dist/index.module.js",
+        "@kanety/stimulus-checklist": "/dist/index.module.js"
+      }
+    }
+  </script>
+  <script type="module">
+    import { Application, Controller } from '@hotwired/stimulus';
+    import ChecklistController from '@kanety/stimulus-checklist';
+    const application = Application.start();
+    application.register('checklist', ChecklistController);
+  </script>
+  <link rel="stylesheet" href="/dist/index.css"></link>
+</head>
+<body>
+  <ul data-controller="checklist">
+    <li>
+      <input type="checkbox">
+      <span>text 1</span>
+    </li>
+    <li>
+      <input type="checkbox">
+      <span>text 2</span>
+    </li>
+    <li>
+      <input type="checkbox">
+      <span>text 3</span>
+    </li>
+    <li>
+      <input type="checkbox">
+      <span>text 4</span>
+    </li>
+    <li>
+      <input type="checkbox">
+      <span>text 5</span>
+    </li>
+  </ul>
+</body>
+</html>

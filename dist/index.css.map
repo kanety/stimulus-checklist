@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.scss"],"names":[],"mappings":"AAAA,0BACE,wBAAiB,CAAjB,qBAAiB,CAAjB,oBAAiB,CAAjB,gBACF","file":"index.css","sourcesContent":[".st-checklist--disable-us {\n  user-select: none;\n}"]}
