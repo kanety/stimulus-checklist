@@ -1,6 +1,6 @@
 # stimulus-checklist
 
-A stimulus controller for checkboxes responding ctrl and shift click.
+A stimulus controller for checkbox list which responds to ctrl and shift click.
 
 ## Dependencies
 
@@ -49,11 +49,16 @@ Build html as follows:
 
 #### filter
 
-Filter checkboxes by css selctor:
+Filter checkboxes by css selector:
 
 ```html
 <ul data-controller="checklist"
-    data-checklist-filter-value="input[type=checkbox]">
+    data-checklist-filter-value="input.first">
+  <li>
+    <input type="checkbox" class="first">
+    <span>text 1</span>
+    <input type="checkbox">
+  </li>
 </ul>
 ```
 

@@ -21,33 +21,19 @@
   <link rel="stylesheet" href="../dist/index.css"></link>
 </head>
 <body>
-  <h1>Filter</h1>
-  <ul data-controller="checklist"
-      data-checklist-filter-value="input.first">
+  <h1>Skip disabled checkbox</h1>
+  <ul data-controller="checklist">
     <li>
-      <input type="checkbox" class="first">
+      <input type="checkbox">
       <span>text 1</span>
-      <input type="checkbox" class="last">
     </li>
     <li>
-      <input type="checkbox" class="first">
+      <input type="checkbox" disabled>
       <span>text 2</span>
-      <input type="checkbox" class="last">
     </li>
     <li>
-      <input type="checkbox" class="first">
+      <input type="checkbox">
       <span>text 3</span>
-      <input type="checkbox" class="last">
-    </li>
-    <li>
-      <input type="checkbox" class="first">
-      <span>text 4</span>
-      <input type="checkbox" class="last">
-    </li>
-    <li>
-      <input type="checkbox" class="first">
-      <span>text 5</span>
-      <input type="checkbox" class="last">
     </li>
   </ul>
 </body>

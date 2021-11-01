@@ -1,4 +1,4 @@
-describe('input-area', () => {
+describe('skip-tags', () => {
   beforeEach(() => {
     document.body.innerHTML = `
       <ul data-controller="checklist"

@@ -1,6 +1,6 @@
 {
   "name": "@kanety/stimulus-checklist",
-  "description": "A stimulus controller for checkboxes responding ctrl and shift click",
+  "description": "A stimulus controller for checkbox list which responds to ctrl and shift click",
   "version": "1.0.0",
   "source": "src/index.js",
   "main": "./dist/index.js",

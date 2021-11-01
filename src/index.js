@@ -13,6 +13,8 @@ export default class extends Controller {
     ['element', 'userselect->preventUS']
   ];
 
+  static skipTags = 'a, input, select, textarea, button';
+
   get items() {
     return Array.from(this.element.children);
   }
@@ -22,10 +24,11 @@ export default class extends Controller {
   }
 
   check(e) {
-    if (e.target.matches('input, select, textarea')) return;
-
     let item = e.target;
-    while (item && item.parentNode != this.element) item = item.parentNode;
+    while (item && item.parentNode != this.element) {
+      if (item.matches(this.constructor.skipTags)) return;
+      item = item.parentNode;
+    }
 
     if (item) {
       this.update(item, e.shiftKey, e.ctrlKey);
