@@ -4,6 +4,7 @@ import './index.scss';
 
 export default class extends Controller {
   static values = {
+    skipTags: String,
     filter: { type: String, default: 'input[type=checkbox]' }
   };
   static actions = [
@@ -23,12 +24,21 @@ export default class extends Controller {
     return this.scope.findAllElements(this.filterValue).filter(cb => !cb.disabled);
   }
 
+  get skipTags() {
+    let tags = this.constructor.skipTags;
+    if (this.hasSkipTagsValue) {
+      tags += ', ' + this.skipTagsValue;
+    }
+    return tags;
+  }
+
   check(e) {
     let item = e.target;
     if (item == this.element) return;
 
+    let tags = this.skipTags;
     while (item && item.parentNode != this.element) {
-      if (item.matches(this.constructor.skipTags)) return;
+      if (item.matches(tags)) return;
       item = item.parentNode;
     }
 
