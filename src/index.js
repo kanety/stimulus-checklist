@@ -25,6 +25,8 @@ export default class extends Controller {
 
   check(e) {
     let item = e.target;
+    if (item == this.element) return;
+
     while (item && item.parentNode != this.element) {
       if (item.matches(this.constructor.skipTags)) return;
       item = item.parentNode;
