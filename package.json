@@ -1,7 +1,7 @@
 {
   "name": "@kanety/stimulus-checklist",
   "description": "A stimulus controller for checkbox list which responds to ctrl and shift click",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "source": "src/index.js",
   "main": "./dist/index.js",
   "umd:main": "./dist/index.umd.js",
